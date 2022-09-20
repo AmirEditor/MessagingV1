@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "google/protobuf/Empty.proto";
+option csharp_namespace = "AmirMahdiMousazadeh";
+
+// The greeting service definition.
+service Messenger {
+  // Sends a greeting 
+  rpc DirectMessage (google.protobuf.Empty) returns (google.protobuf.Empty);
+  rpc BroadcastMessage (google.protobuf.Empty) returns (google.protobuf.Empty);
+  //rpc SendMessage (stream Message) returns (stream Message);
+  rpc SendMessage (Message) returns (google.protobuf.Empty);
+  rpc SubscribeMessages (UserInfo) returns (stream Message);
+
+}
+
+// The request message containing the user's name.
+message Message {
+  string text = 1;
+  string receiver = 2;
+  string sender = 3;
+}
+
+// The response message containing the greetings.
+message UserInfo {
+  string name = 1;
+}
