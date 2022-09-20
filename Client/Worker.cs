@@ -103,45 +103,6 @@ namespace Client
                 }
 
             }
-
-
-            //while (!stoppingToken.IsCancellationRequested)
-            //{
-            //    loop:
-            //    Console.WriteLine("Please choose what to do !");
-            //    Console.WriteLine("1.Get online users !");
-            //    Console.WriteLine("0.Exit !");
-            //    int choosed;
-            //    var choose =int.TryParse(Console.ReadLine(),out choosed);
-            //    if (choose==false)
-            //    {
-            //        Console.Clear();
-            //        Console.ForegroundColor= ConsoleColor.Red;
-            //        Console.WriteLine("Something went wrong , please try again . . .");
-            //        Console.ResetColor();
-            //        goto loop;
-            //    }
-            //    switch (choosed)
-            //    {
-            //        case 1:
-
-            //            break;
-            //        default:
-            //            break;
-            //    }
-            //    var res = Client.SubscribeMessages(new UserInfo { Name = "Amir" }) ;
-
-            //    var theTask = Task.Run(async () =>
-            //    {
-            //        await foreach (var reading in res.ResponseStream.ToAsyncEnumerable())
-            //        {
-            //            _logger.LogInformation($"received data : {reading.Text}");
-            //        }
-            //    });
-
-            //    await theTask;
-            //    await Task.Delay(3000);
-            //}
         }
     }
 }
