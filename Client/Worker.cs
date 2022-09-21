@@ -73,6 +73,7 @@ namespace Client
                         // write
                         while (true)
                         {
+                            Console.WriteLine("enter broadcast message:");
                             var key = Console.ReadKey();
 
                             // A key input starts writing mode
